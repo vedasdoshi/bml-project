@@ -26,8 +26,8 @@ export default function RootLayout({
           
           {/* Navigation Links & Buttons */}
           <div className="flex items-center gap-8 font-sans text-sm font-medium text-[#6e6353]">
-            <Link href="#" className="hover:text-black transition-colors">Home</Link>
-            <Link href="#" className="hover:text-black transition-colors">Features</Link>            
+            <Link href="/" className="hover:text-black transition-colors">Home</Link>
+            <Link href="/features" className="hover:text-black transition-colors">Features</Link>            
             <Link href="/login">
               <button className="flex items-center gap-1 rounded-full bg-[#526e3d] px-6 py-2.5 font-sans font-bold text-white hover:bg-[#435b32] transition-colors">
                 Log in &rarr;

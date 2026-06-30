@@ -1,3 +1,21 @@
 {
-    "prisma.pinToPrisma6": true
+    "prisma.pinToPrisma6": true,
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 33060,
+            "driver": "MySQL",
+            "name": "MySQL Local",
+            "database": "loginsystem",
+            "username": "root",
+            "password": "27Oct2010#",
+            "connectionTimeout": 30
+        }
+    ]
 }

@@ -110,7 +110,6 @@ export default function WorkspaceDashboard() {
                 >
                   <input type="file" id="target-dash-upload" accept=".txt,.csv" className="hidden" onChange={(e) => e.target.files?.[0] && handleFileUpload(e.target.files[0])} />
                   <div className="flex flex-col items-center gap-3">
-                    <div className="flex h-14 w-16 items-center justify-center rounded-2xl bg-[#f0e4d3] text-3xl border border-[#2b241a]/5 shadow-sm">📁</div>
                     <h3 className="font-serif text-2xl font-black mt-2">Drop your file here</h3>
                     <p className="text-sm text-[#6e6353]">or <label htmlFor="target-dash-upload" className="cursor-pointer font-medium hover:underline text-[#2b241a]/90">click to upload</label></p>
                     <div className="flex gap-2 mt-2 text-[10px] font-extrabold text-[#6e6353] font-mono">
@@ -152,10 +151,10 @@ export default function WorkspaceDashboard() {
             <div className="flex-1 rounded-[2.5rem] border border-[#2b241a]/10 bg-[#e3d5c1] p-8 flex flex-col gap-5 min-w-[300px]">
               <h3 className="text-xs font-extrabold uppercase tracking-widest text-[#6e6353] border-b border-[#2b241a]/10 pb-3 mt-1">What gets analysed</h3>
               <div className="flex flex-col gap-3 font-sans text-sm font-bold text-[#2b241a]">
-                <div className="flex items-center gap-3 rounded-xl bg-[#cbdcb9]/50 px-4 py-3 border border-[#4c6a37]/10"><span>📊</span><span>Aspect-based sentiment</span></div>
-                <div className="flex items-center gap-3 rounded-xl bg-[#cbdcb9]/50 px-4 py-3 border border-[#4c6a37]/10"><span>📈</span><span>Trend velocity 30d</span></div>
-                <div className="flex items-center gap-3 rounded-xl bg-[#dfd3c3]/70 px-4 py-3 border border-[#2b241a]/5 opacity-90"><span>🎯</span><span>Opportunity scoring</span></div>
-                <div className="flex items-center gap-3 rounded-xl bg-[#dfd3c3]/70 px-4 py-3 border border-[#2b241a]/5 opacity-90"><span>✦</span><span>AI strategic summary</span></div>
+                <div className="flex items-center gap-3 rounded-xl bg-[#cbdcb9]/50 px-4 py-3 border border-[#4c6a37]/10"><span>Aspect-based sentiment</span></div>
+                <div className="flex items-center gap-3 rounded-xl bg-[#cbdcb9]/50 px-4 py-3 border border-[#4c6a37]/10"><span>Trend velocity 30d</span></div>
+                <div className="flex items-center gap-3 rounded-xl bg-[#dfd3c3]/70 px-4 py-3 border border-[#2b241a]/5 opacity-90"><span>Opportunity scoring</span></div>
+                <div className="flex items-center gap-3 rounded-xl bg-[#dfd3c3]/70 px-4 py-3 border border-[#2b241a]/5 opacity-90"><span>AI strategic summary</span></div>
               </div>
             </div>
           </div>
@@ -176,7 +175,7 @@ export default function WorkspaceDashboard() {
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
               <div className="lg:col-span-2 rounded-3xl bg-[#2b241a] text-[#eaddca] p-6 flex flex-col justify-between min-h-[190px]">
                 <div>
-                  <span className="text-[10px] tracking-widest font-bold uppercase text-amber-500">🔥 Trending Fast</span>
+                  <span className="text-[10px] tracking-widest font-bold uppercase text-amber-500">Trending Fast</span>
                   <h2 className="font-serif text-3xl font-black mt-2 tracking-tight">{report.trending_fast?.title}</h2>
                   <p className="text-sm opacity-85 mt-2 font-sans font-medium">{report.trending_fast?.description}</p>
                 </div>
@@ -188,7 +187,7 @@ export default function WorkspaceDashboard() {
 
               <div className="rounded-3xl bg-[#e3d5c1] border border-[#2b241a]/10 p-6 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] tracking-widest font-bold uppercase text-[#526e3d]">↗ Rising</span>
+                  <span className="text-[10px] tracking-widest font-bold uppercase text-[#526e3d]">Rising</span>
                   <h3 className="font-serif text-xl font-black mt-2 tracking-tight">{report.rising_concept?.title}</h3>
                   <p className="text-xs text-[#6e6353] mt-2 font-medium leading-relaxed">{report.rising_concept?.description}</p>
                 </div>
@@ -199,17 +198,17 @@ export default function WorkspaceDashboard() {
             {/* Horizontal micro-cards blocks */}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 text-sm">
               <div className="rounded-2xl border border-[#2b241a]/10 bg-[#e3d5c1] p-4">
-                <span className="rounded-full bg-[#cbdcb9] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[#354f24]">✦ Emerging</span>
+                <span className="rounded-full bg-[#cbdcb9] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[#354f24]">Emerging</span>
                 <h4 className="font-serif text-lg font-bold mt-2">{report.emerging_cluster?.title}</h4>
                 <p className="text-xs text-[#6e6353] mt-0.5 font-semibold">{report.emerging_cluster?.subtitle}</p>
               </div>
               <div className="rounded-2xl border border-[#2b241a]/10 bg-red-100/40 p-4">
-                <span className="rounded-full bg-red-200 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-red-800">⚠️ Pain Point</span>
+                <span className="rounded-full bg-red-200 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-red-800">Pain Point</span>
                 <h4 className="font-serif text-lg font-bold mt-2">{report.pain_point?.title}</h4>
                 <p className="text-xs text-[#6e6353] mt-0.5 font-semibold">{report.pain_point?.subtitle} · <span className="text-red-700">{report.pain_point?.percentage}</span></p>
               </div>
               <div className="rounded-2xl border border-[#2b241a]/10 bg-[#e3d5c1] p-4">
-                <span className="rounded-full bg-orange-100 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-orange-800">📉 Declining</span>
+                <span className="rounded-full bg-orange-100 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-orange-800">Declining</span>
                 <h4 className="font-serif text-lg font-bold mt-2">{report.declining_metric?.title}</h4>
                 <p className="text-xs text-[#6e6353] mt-0.5 font-semibold">{report.declining_metric?.subtitle}</p>
               </div>
@@ -241,7 +240,7 @@ export default function WorkspaceDashboard() {
 
             {/* Strategic Summary footer block */}
             <div className="rounded-3xl bg-[#526e3d] p-6 text-white shadow-md">
-              <h3 className="font-serif text-xl font-bold border-b border-white/20 pb-2 mb-3">✨ AI Strategic Summary</h3>
+              <h3 className="font-serif text-xl font-bold border-b border-white/20 pb-2 mb-3">AI Strategic Summary</h3>
               <p className="text-sm font-medium leading-relaxed opacity-95">{report.ai_strategic_summary}</p>
             </div>
           </div>
